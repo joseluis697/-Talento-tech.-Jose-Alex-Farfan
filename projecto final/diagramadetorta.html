@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Torta con CSV</title>
+    <link rel="stylesheet" href="torta.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="miGrafica"></canvas>
+
+    <script>
+        async function cargarCSV() {
+            const response = await fetch('11 share-electricity-wind.csv');
+            const data = await response.text();
+            
+            const filas = data.split('\n').slice(1); 
+            const labels = [];
+            const valores = [];
+
+            filas.forEach(fila => {
+                const [fecha, valor] = fila.split(',');
+                labels.push(fecha);
+                valores.push(parseFloat(valor));
+            });
+
+            return { labels, valores };
+        }
+
+        async function crearGrafica() {
+            const datos = await cargarCSV();
+
+            const ctx = document.getElementById('miGrafica').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: datos.labels,
+                    datasets: [{
+                        label: 'Valores',
+                        data: datos.valores,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(255, 206, 86, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: true }
+                    }
+                }
+            });
+        }
+
+        crearGrafica();
+    </script>
+</body>
+</html>

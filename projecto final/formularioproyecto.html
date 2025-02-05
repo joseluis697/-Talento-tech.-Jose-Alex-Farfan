@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario eólico</title>
+        <link rel="shorcut icon"href="logo.png"type="image/x-icon">
+        <link rel="stylesheet" href="archivo.css">
+        <script>
+            function mostrarMensaje(event) {
+                event.preventDefault();
+                document.getElementById("mensaje-exito").style.display = "block";
+                alert("Enviado exitosamente");
+                setTimeout(() => {
+                    document.getElementById("mensaje-exito").style.display = "none";
+                    document.getElementById("formulario").reset();
+                }, 3000);
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="paginafinal.html">Inicio</a>
+                <a href="calculadora.html">Calculadora </a>
+                <a href="proyect.tabla.html">tabla con datos</a>
+                <a href="formularioproyecto.html">Registro</a>
+            </nav>
+        <Section class="textos-header">
+            <h1>Formulario de registro </h1>
+            <h2>En este apartado podras registrarte para recibir mas informacion sobre nuestra pagina y </h2>
+        </Section>
+    </header>
+        <form id="formulario" onsubmit="mostrarMensaje(event)">
+            <label for="nombre">Nombre y apellido</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+            <label for="email">Correo electrónico</label><br>
+            <input type="email" id="email" name="email"required><br>
+            <label for="motivo">sugerencias</label><br>
+            <textarea id="motivo" name="motivo" cols="25" rows="5"></textarea><br>>
+            <a  class="regreso" href="paginafinal.html">Inicio de la página</a><br><br>            
+            <input type="submit" class="boton" value="Enviar">
+            <input type="reset" class="button" value="Cancelar">
+        </form>
+        <p id="mensaje-exito" style="display: none; color: green; font-weight: bold;">¡Enviado exitosamente!</p>
+        <footer>
+            <div class="contenedo-footer">    
+            <div class="contenedor-foo">
+                <h4>telefono</h4>
+                <p>300 654 9874</p>
+            </div>
+            <div class="contenedor-foo">
+                <h4>correo</h4>
+                <p>EolixSkys@gmail.com</p>
+            </div>
+            <div class="contenedor-foo">
+                <h4>direccion</h4>
+                <p>cr22a calle el dorado</p>
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>

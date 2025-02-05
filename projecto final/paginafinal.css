@@ -1,0 +1,398 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Header */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #fff8f8;
+}
+
+
+header {
+    width: 100%;
+    height: 800px;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74)),url(nature-678374.jpg);
+     /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74)),url(nature-678374.jpg);
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size:cover;
+
+}
+
+.textos-header h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.textos-header h2 {
+    position: relative;
+    text-align: center;
+    padding: auto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color:#ffffff
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74)),;
+     /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74));
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size:cover;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(4, 103, 157, 0.971);
+    color: #052638;
+    border-radius: 5px;
+}
+nav a:active{
+    background:#052638;
+    color: rgb(2, 94, 143);
+}
+
+
+main {
+    padding: 80px 20px 20px; 
+}
+
+
+section {
+    padding: 60px 20px;
+}
+
+.contenedor-texto1, .contendor-acerca-de-la-energia, .galeria-port {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.contenedor-texto1 img, .Imageabout, .Imageabout2 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-texto1 p1, .contenido-miku p {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000000;
+}
+
+/* zona Tipos de energía eólica */
+.contenedor_acerca_de_la_energia {
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    padding: 60px 10px;
+}
+.contenedor_acerca_de_la_energia h2{
+    color:#000000
+}
+
+.contenido-miku h3 {
+    color: #050505;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.contenido-miku h3 span {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* zona portafolio  */
+.portafolio {
+    background: white;
+    padding: 60px 20px;
+}
+
+.galeria-port {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.galeria-port img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-port img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.galeria-port h3 {
+    color: #16a085;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.galeria-port p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+
+
+
+/*zona graficas */
+.grafica1{
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height:  40px;
+    }
+    
+    /* Contenedor del gráfico */
+    canvas {
+        max-width: 400px;
+        max-height: 300px;
+        width: 40px; /* Ajusta según el tamaño deseado */
+        height: 40px; /* Ajusta según el tamaño deseado */
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 600px) {
+        canvas {
+            width: 90%;
+            height: auto;
+        }
+    }
+    }
+.grafica2{/* Estilos generales */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+    }
+    
+    /* Contenedor del gráfico */
+    canvas {
+        max-width: 400px;
+        max-height: 300px;
+        width: 40px; /* Ajusta según el tamaño deseado */
+        height: 40px; /* Ajusta según el tamaño deseado */
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media (max-width: 600px) {
+        canvas {
+            width: 90%;
+            height: auto;
+        }
+    }
+    }
+
+.grafico3{body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+/* Contenedor del gráfico */
+canvas {
+    max-width: 400px;
+    max-height: 300px;
+    width: 40px; /* Ajusta según el tamaño deseado */
+    height: 40px; /* Ajusta según el tamaño deseado */
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    canvas {
+        width: 90%;
+        height: auto;
+    }
+}
+}
+.grafica4{/* Estilos generales para el cuerpo */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+    }
+    
+    /* Estilo para el lienzo del gráfico */
+    canvas {
+        max-width: 400px;
+        max-height: 300px;
+        width: 40px; /* Ajusta según el tamaño deseado */
+        height: 40px; /* Ajusta según el tamaño deseado */
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 600px) {
+        canvas {
+            width: 90%;
+            height: auto;
+        }
+    }
+    
+    }
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contenedo-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contenedor-foo h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color:#f4f4f9
+}
+
+.contenedor-foo p {
+    font-size: 1rem;
+    color: #bdc3c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .contenedor-texto1, .contendor-acerca-de-la-energia, .galeria-port {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenedor-texto1 img, .Imageabout, .Imageabout2 {
+        margin-bottom: 20px;
+    }
+
+    .contenedo-footer {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico con CSV</title>
+    <link rel="stylesheet" href="linea.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <canvas id="grafico"></canvas>
+    <script>
+        async function cargarCSV(url) {
+            const response = await fetch(url);
+            const data = await response.text();
+            return new Promise((resolve) => {
+                Papa.parse(data, {
+                    header: true,
+                    dynamicTyping: true,
+                    complete: (result) => resolve(result.data)
+                });
+            });
+        }
+
+        async function crearGrafico() {
+            const datos = await cargarCSV('09 cumulative-installed-wind-energy-capacity-gigawatts.csv'); 
+            const etiquetas = datos.map(row => row.Fecha); 
+            const valores = datos.map(row => row.Valor); 
+
+            const ctx = document.getElementById('grafico').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: etiquetas,
+                    datasets: [{
+                        label: 'Datos Colombia viento',
+                        data: valores,
+                        borderColor: 'blue',
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: { display: true },
+                        y: { display: true }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', crearGrafico);
+    </script>
+
+    <script src="graficaLinea.js"></script>  
+</body>
+</html>

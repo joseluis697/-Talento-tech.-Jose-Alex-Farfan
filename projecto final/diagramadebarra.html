@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Barras con CSV</title>
+    <link rel="stylesheet" href="diagrama.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="miGrafica"></canvas>
+
+    <script>
+        async function cargarCSV() {
+            const response = await fetch('08 wind-generation.csv');
+            const data = await response.text();
+            
+            const filas = data.split('\n').slice(1); // Omitir la primera fila (encabezado)
+            const labels = [];
+            const valores = [];
+
+            filas.forEach(fila => {
+                const [fecha, valor] = fila.split(',');
+                labels.push(fecha);
+                valores.push(parseFloat(valor));
+            });
+
+            return { labels, valores };
+        }
+
+        async function crearGrafica() {
+            const datos = await cargarCSV();
+
+            const ctx = document.getElementById('miGrafica').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: datos.labels,
+                    datasets: [{
+                        label: 'Valores Chile energia viento',
+                        data: datos.valores,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: true }
+                    },
+                    scales: {
+                        x: { title: { display: true, text: 'Fecha' } },
+                        y: { title: { display: true, text: 'Valor' } }
+                    }
+                }
+            });
+        }
+
+        crearGrafica();
+    </script>
+</body>
+</html>

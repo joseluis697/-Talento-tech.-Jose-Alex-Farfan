@@ -1,0 +1,243 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Header */
+/* Importar la fuente */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #fff8f8;
+}
+
+
+header {
+    width: 100%;
+    height: 500px;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74)),url(calcu.jpg);
+     /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74)),url(calcu.jpg);
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size:cover;
+
+}
+
+.textos-header h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.textos-header h2 {
+    position: relative;
+    text-align: center;
+    padding: auto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color:#ffffff
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74)),;
+     /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74));
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size:cover;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(4, 103, 157, 0.971);
+    color: #052638;
+    border-radius: 5px;
+}
+nav a:active{
+    background:#052638;
+    color: rgb(2, 94, 143);
+}
+
+
+main {
+    padding: 80px 20px 20px; /* Espacio para evitar que el menú cubra el contenido */
+}
+
+
+section {
+    padding: 60px 20px;
+}
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Títulos */
+.container h1 {
+    font-size: 2rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+/* Estilo de formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #0077b6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.3);
+}
+
+/* Botón */
+button {
+    background: #0077b6;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background: #005f87;
+    transform: scale(1.05);
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f4f4f9;
+    border-left: 5px solid #0077b6;
+    border-radius: 5px;
+    text-align: left;
+}
+
+#resultado h2 {
+    font-size: 1.5rem;
+    color: #0077b6;
+}
+
+#resultado p {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+    /* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contenedo-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contenedor-foo h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color:#f4f4f9
+}
+
+.contenedor-foo p {
+    font-size: 1rem;
+    color: #bdc3c7;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

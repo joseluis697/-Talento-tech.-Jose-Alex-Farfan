@@ -1,0 +1,222 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Header */
+/* Importar la fuente */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #fff8f8;
+}
+
+
+header {
+    width: 100%;
+    height: 500px;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74)),url(registro.jpg);
+     /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74)),url(registro.jpg);
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size:cover;
+
+}
+
+.textos-header h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.textos-header h2 {
+    position: relative;
+    text-align: center;
+    padding: auto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color:#ffffff
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74)),;
+     /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(197, 38%, 28%, 0.57), hsla(194, 35%, 19%, 0.816), hsla(198, 43%, 11%, 0.74));
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size:cover;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(4, 103, 157, 0.971);
+    color: #052638;
+    border-radius: 5px;
+}
+nav a:active{
+    background:#052638;
+    color: rgb(2, 94, 143);
+}
+
+
+main {
+    padding: 80px 20px 20px; /* Espacio para evitar que el menú cubra el contenido */
+}
+
+
+section {
+    padding: 60px 20px;
+}
+/*FORM*/
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #ffffff;  /* fallback for old browsers */
+    margin: 0;
+    padding: 0;
+}
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+h1 {
+    color: #011e33;
+}
+p{
+    color: #011e33;
+}
+
+label {
+    color:#000000;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #b3d9ff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.boton, .button {
+    background-color: #008080;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.boton:hover, .button:hover {
+    background-color: #006666;
+}
+
+.boton:active, .button:active {
+    background-color: #004d4d;
+    transform: scale(0.95);
+}
+.regreso{
+    color:#006666;
+    text-decoration:none;
+}
+.regreso:hover{
+    color: #043030;
+}
+.regreso:active{
+    color:rgb(1, 17, 17)
+}
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contenedo-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contenedor-foo h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color:#f4f4f9
+}
+
+.contenedor-foo p {
+    font-size: 1rem;
+    color: #bdc3c7;
+}
